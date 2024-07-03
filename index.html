@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+        <label for="accNo">ACC NO</label>
+        <input type="number" id="accNo">
+        <label for="userId">USER ID</label>
+        <input type="text" id="userId">
+        <label for="password">PASSWORD</label>
+        <input type="password" id="password">
+        <label for="termId">TERM ID</label>
+        <input type="text" id="termId">
+        <label for="siteId">SITE ID</label>
+        <input type="number" id="siteId">
+        <label for="compId">COMP ID</label>
+        <input type="number" id="compId">
+        <label>LOGIN <button onclick="validateUser()">ENT</button></label>
+        <label>EXIT <button onclick="exitPage()">F9</button></label>
+    </div>
+
+    <script>
+        const users = {
+            "Asif01": "Asif",
+            "Tauqeer01": "Tauqeer",
+            "Ravi01": "Ravi"
+        };
+
+        function validateUser() {
+            const userId = document.getElementById('userId').value;
+            const password = document.getElementById('password').value;
+
+            if (users[userId] && users[userId] === password) {
+                localStorage.setItem("currentUserName", userId);
+                window.location.href = 'index2.html';
+            } else {
+                alert('Invalid User ID or Password');
+            }
+        }
+
+        function exitPage() {
+            window.close(); // This will not work on most browsers due to security reasons
+        }
+    </script>
+</body>
+
+</html>

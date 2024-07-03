@@ -1,0 +1,149 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+
+
+        <ol>
+            <li id="bold1">RECEIVING</li>
+            <li id="bold2">PICKING</li>
+            <li id="bold3">SHIPING</li>
+            <li>INVENTORY</li>
+            <li>REPRINT</li>
+            <li>EXIT</li>
+
+        </ol>
+        <label for="" id="page01">ENTER SELECTION </label><input type="number">
+        <label for="">SEND <button onclick="nextpage()">ENT</button></label><label for="">PREV <button>F1</button></label>
+
+    </div>
+    <script>
+
+
+
+        var username = localStorage.getItem("currentUserName");
+        console.log(username);
+        if (username == "Asif01") {
+            document.getElementById('bold1').style.fontWeight = "bold";
+
+
+        }
+        else if (username == "Ravi01") {
+            document.getElementById('bold2').style.fontWeight = "bold";
+        }
+
+        else if (username == "Tauqeer01") {
+            document.getElementById('bold3').style.fontWeight = "bold";
+        }
+        else {
+
+        }
+
+        const pageNo = document.getElementById('page01').value;
+        console.log(pageNo, "ajca");
+
+        function nextpage (){
+        if (pageNo == 1) {
+            window.location.href = 'index3.html';
+        }
+        else{
+            alert("invalid number")
+        }
+    }
+
+    </script>
+</body>
+
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+        <ol>
+            <li id="bold1">RECEIVING</li>
+            <li id="bold2">PICKING</li>
+            <li id="bold3">SHIPING</li>
+            <li>INVENTORY</li>
+            <li>REPRINT</li>
+            <li>EXIT</li>
+        </ol>
+        <label for="" id="page01">ENTER SELECTION </label><input type="number" id="selectionInput">
+        <label for="">SEND <button onclick="nextpage()">ENT</button></label>
+        <label for="">PREV <button>F1</button></label>
+    </div>
+
+    <script>
+        var username = localStorage.getItem("currentUserName");
+        console.log(username);
+
+        
+        if (username == "Asif01") {
+            document.getElementById('bold1').style.fontWeight = "bold";
+            function nextpage() {
+                const pageNo = document.getElementById('selectionInput').value;
+                if (pageNo == 1) {
+                    window.location.href = 'index3.html';
+                } else {
+                    alert("Invalid number");
+                }
+
+            }
+        } else if (username == "Ravi01") {
+            document.getElementById('bold2').style.fontWeight = "bold";
+            function nextpage() {
+                const pageNo = document.getElementById('selectionInput').value;
+                if (pageNo == 2) {
+                    window.location.href = 'index3.html';
+                } else {
+                    alert("Invalid number");
+                }
+
+            }
+        } else if (username == "Tauqeer01") {
+            document.getElementById('bold3').style.fontWeight = "bold";
+            function nextpage() {
+                const pageNo = document.getElementById('selectionInput').value;
+                if (pageNo == 3) {
+                    window.location.href = 'index3.html';
+                } else {
+                    alert("Invalid number");
+                }
+
+            }
+        }
+
+        // function nextpage() {
+        //     const pageNo = document.getElementById('selectionInput').value;
+        //     console.log(pageNo, "ajca");
+        //     if (pageNo == 1) {
+        //         window.location.href = 'index3.html';
+        //     } else if(pageNo == 2){
+        //         window.location.href = 'index3.html';
+        //     }
+        //     else if(pageNo == 3){
+        //         window.location.href = 'index3.html';
+        //     }
+        //     else{
+        //         alert("Invalid number");
+        //     }
+        // }
+    </script>
+</body>
+
+</html>

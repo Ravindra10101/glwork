@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+        <label for="">PICKING MENU</label>
+
+        <!-- <ol>
+            <li id="bold01_page3">CARTON PICKING</li>
+            <li id="bold02_page3">CLUSTER PICKING</li>
+            <li id="bold03_page3">MERGE CARTON</li>
+            <li>SPLIT CARTON </li>
+            <li>AUDIT</li>
+
+        </ol> -->
+        <label for="">WAVE NO</label><input type="number" id="wave_no_Input">
+        <label for="">AND,OR ZONE NO</label>
+        <input type="text" id="zone_no_Input"  name="zone_no_Input" oninput="autoFillorderNo()">
+        <label for="">AND,OR ORDER NO</label>
+        <input type="number" id="order_no_Input"    name="order_no_Input"  readonly>
+        <label for="">SEND<button>ENT</button></label><label for="">PREV <button
+                onclick="backpage()">F7</button></label>
+
+        <script>
+
+            function autoFillorderNo() {
+                var zone_no_Input = document.getElementById('zone_no_Input').value;
+                var order_no_Input = document.getElementById('order_no_Input').value;
+
+                if (zone_no_Input.toUpperCase() === 'G31712-L') {
+                    order_no_Input.value = '24717626';
+                } else {
+                    order_no_Input.value = " ";
+                }
+
+            }
+
+
+
+        </script>
+
+
+
+
+
+    </div>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <label for="firstName">First Name:</label>
+<input type="text" id="firstName" name="firstName" oninput="autoFillLastName()">
+<br><br>
+<label for="lastName">Last Name:</label>
+<input type="text" id="lastName" name="lastName" readonly>
+</form>
+
+<script>
+function autoFillLastName() {
+    var firstName = document.getElementById('firstName').value;
+    var lastNameField = document.getElementById('lastName');
+    
+    if (firstName.toLowerCase() === 'ravi') {
+        lastNameField.value = 'Pandey';
+    } else {
+        lastNameField.value = '';
+    }
+} -->
